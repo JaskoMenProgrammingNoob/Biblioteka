@@ -32,15 +32,18 @@ class Program
 
 
 
-        List<Ksiazka> Zbior = new List<Ksiazka>();
-        Zbior.Add((ksiazka));
-        Zbior.Add((ksiazka1));
+        
+        
 
+        
+        Biblio biblio = new Biblio();
 
-        Biblio biblio = new Biblio
-        foreach (Ksiazka ksiazki in Zbior)
-        {
+        biblio.Zbior.Add((ksiazka));
+        biblio.Zbior.Add((ksiazka1)); 
 
+        
+        foreach (Ksiazka ksiazki in biblio.Zbior)
+        { 
             Console.WriteLine($"ISBN: {ksiazki.ISBN}");
             Console.WriteLine($"Tytuł: {ksiazki.Tytul}");
             Console.WriteLine($"Autor: {ksiazki.Autor}");
