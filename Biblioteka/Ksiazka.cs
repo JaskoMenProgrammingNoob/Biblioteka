@@ -6,12 +6,12 @@ namespace Biblioteka
 {
     public class Ksiazka
     {
-        public string ISBN { get; set; }
-        public string Tytul { get; set; }
-        public string Autor { get; set; }
-        public string Opis { get; set; }
-        public string Gatunek { get; set; }
-        public bool Uszkodzona { get; set; }
+        public required string ISBN { get; set; }
+        public required string Tytul { get; set; }
+        public required string Autor { get; set; }
+        public required string Opis { get; set; }
+        public required string Gatunek { get; set; }
+        public required bool Uszkodzona { get; set; }
 
         public string Ksiega;
         public static int liczbaKsiazek = 0;
