@@ -1,4 +1,5 @@
 ﻿using Biblioteka;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
@@ -9,7 +10,7 @@ class Program
     static void Main(string[] args)
     {
 
-        Ksiazka ksiazka = new Ksiazka
+        Ksiazka ksiazka = new Ksiazka("Księga główna")
         {
             ISBN = "0000000000001",
             Tytul = "Hobbit: Tam i z powrotem",
@@ -19,7 +20,7 @@ class Program
 
             Uszkodzona = false
         };
-        Ksiazka ksiazka1 = new Ksiazka
+        Ksiazka ksiazka1 = new Ksiazka("Księga główna")
         {
             ISBN = "0000000000002",
             Tytul = "Hobbit: Pustkowie Smauga",
@@ -30,8 +31,8 @@ class Program
             Uszkodzona = false
         };
 
-
-
+        
+        
         
         
 
@@ -50,8 +51,10 @@ class Program
             Console.WriteLine($"Opis: {ksiazki.Opis}");
             Console.WriteLine($"Gatunek: {ksiazki.Gatunek}");
             Console.WriteLine($"Uszkodzona: {ksiazki.Uszkodzona}");
+            
             Console.WriteLine();
 
         }
+        Console.WriteLine($"Liczba książek w zbiorze: {Ksiazka.liczbaKsiazek}");
     }
 }

@@ -9,8 +9,7 @@ namespace Biblioteka
         public List<Ksiazka> Zbior { get; set; } = [];
         //public List<Wypozyczone> Wypozyczenia { get; set; } = [];
         //public List<Czytelnik> Czytelnicy { get; set; } = [];
-
-       
+        
 
     }
 }
