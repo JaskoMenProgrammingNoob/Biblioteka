@@ -27,20 +27,30 @@ class Program
             Autor = "John Tolkien",
             Opis = "Opowieść o smokach",
             Gatunek = "Fantasy",
-
+            
             Uszkodzona = false
         };
 
-        
-        
-        
-        
+        Ksiazka ksiazka2 = new Ksiazka("Księga główna")
+        {
+            ISBN = "0000000000003",
+            Tytul = "Star Wars: Wojny Sithow",
+            Autor = "James Camerone",
+            Opis = "Miecze świetlne",
+            Gatunek = "Sci-Fun",
 
-        
+            Uszkodzona = true
+        };
+
+
+
+
+
         Biblio biblio = new Biblio();
 
         biblio.Zbior.Add((ksiazka));
-        biblio.Zbior.Add((ksiazka1)); 
+        biblio.Zbior.Add((ksiazka1));
+        biblio.Zbior.Add((ksiazka2));
 
         
         foreach (Ksiazka ksiazki in biblio.Zbior)
@@ -50,7 +60,7 @@ class Program
             Console.WriteLine($"Autor: {ksiazki.Autor}");
             Console.WriteLine($"Opis: {ksiazki.Opis}");
             Console.WriteLine($"Gatunek: {ksiazki.Gatunek}");
-            Console.WriteLine($"Uszkodzona: {ksiazki.Uszkodzona}");
+            Console.WriteLine($"Uszkodzona: {(ksiazki.Uszkodzona ? "Tak" : "Nie")}");
             
             Console.WriteLine();
 
